@@ -10,14 +10,14 @@ Hooks.on("init", function() {
 // Класс листа актёра
 class MyActorSheet extends ActorSheet {
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
-      classes: ["my-system", "sheet", "actor"],
-      template: "systems/my-system/templates/actor/actor-sheet.html",
-      width: 600,
-      height: 700,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "main" }]
-    });
-  }
+  return foundry.utils.mergeObject(super.defaultOptions, {
+    classes: ["my-system", "sheet", "actor"],
+    template: "systems/my-system/templates/actor/actor-sheet.html",
+    width: 600,
+    height: 700,
+    tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "main" }]
+  });
+}
 
   activateListeners(html) {
     super.activateListeners(html);
@@ -202,7 +202,7 @@ class MyActorSheet extends ActorSheet {
 // Класс листа предмета
 class MyItemSheet extends ItemSheet {
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["my-system", "sheet", "item"],
       template: "systems/my-system/templates/item/item-sheet.html",
       width: 400,
