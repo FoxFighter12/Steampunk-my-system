@@ -8,8 +8,8 @@
     "verified": "14"
   },
   "url": "https://github.com/FoxFighter12/Steampunk-my-system",
-  "manifest": "https://github.com/FoxFighter12/Steampunk-my-system/releases/download/latest/system.json",
-  "download": "https://github.com/FoxFighter12/Steampunk-my-system/releases/download/latest/System.zip",
+  "manifest": "https://github.com/FoxFighter12/Steampunk-my-system/releases/latest/download/system.json",
+  "download": "https://github.com/FoxFighter12/Steampunk-my-system/releases/latest/download/System.zip",
   "authors": [
     {
       "name": "Cable Snake"
