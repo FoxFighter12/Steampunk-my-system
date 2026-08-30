@@ -2,14 +2,14 @@
   "id": "my-system",
   "title": "Моя система",
   "description": "Система с характеристиками, умелостями и механикой броска двух костей",
-  "version": "1.0.0",
+  "version": "1.0.0.1",
   "compatibility": {
     "minimum": "14",
     "verified": "14"
   },
   "url": "https://github.com/FoxFighter12/Steampunk-my-system",
-  "manifest": "https://github.com/FoxFighter12/Steampunk-my-system/releases/download/ses/system.json"
-  "download": "https://github.com/FoxFighter12/Steampunk-my-system/archive/refs/tags/ses.zip"
+  "manifest": "https://github.com/FoxFighter12/Steampunk-my-system/releases/download/latest/system.json",
+  "download": "https://github.com/FoxFighter12/Steampunk-my-system/releases/download/latest/Steampunk.zip",
   "authors": [
     {
       "name": "Cable Snake"
