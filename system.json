@@ -7,9 +7,12 @@
     "minimum": "14",
     "verified": "14"
   },
+  "url": "https://github.com/FoxFighter12/Steampunk-my-system",
+  "manifest": "https://github.com/FoxFighter12/Steampunk-my-system/releases/download/ses/system.json"
+  "download": "https://github.com/FoxFighter12/Steampunk-my-system/archive/refs/tags/ses.zip"
   "authors": [
     {
-      "name": "Ваше имя"
+      "name": "Cable Snake"
     }
   ],
   "esmodules": ["module/my-system.js"],
