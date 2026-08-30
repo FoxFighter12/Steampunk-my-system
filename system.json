@@ -2,7 +2,7 @@
   "id": "my-system",
   "title": "Моя система",
   "description": "Система с характеристиками, умелостями и механикой броска двух костей",
-  "version": "1.0.0.2",
+  "version": "1.0.0.3",
   "template": "template.json",
   "compatibility": {
     "minimum": "14",
