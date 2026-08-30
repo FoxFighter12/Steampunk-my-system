@@ -1,0 +1,72 @@
+<form class="my-system actor-sheet" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Имя"/></h1>
+    </div>
+  </header>
+
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="main">Основное</a>
+    <a class="item" data-tab="items">Инвентарь</a>
+  </nav>
+
+  <section class="sheet-body">
+    <!-- Вкладка основных характеристик -->
+    <div class="tab" data-group="primary" data-tab="main">
+      {{#each system.characteristics as |value key|}}
+        <div class="characteristic-block">
+          <h3>{{localize (concat "MY.system.characteristics." key)}}</h3>
+          <div class="char-row">
+            <label>Уровень:</label>
+            <select name="system.characteristics.{{key}}">
+              {{#select value}}
+                <option value="E">E</option>
+                <option value="D">D</option>
+                <option value="C">C</option>
+              {{/select}}
+            </select>
+          </div>
+          <div class="skills-list">
+            {{#each (lookup ../system.skills key) as |skillValue skillKey|}}
+              <div class="skill-row">
+                <span class="skill-name rollable" data-characteristic="{{key}}" data-skill="{{skillKey}}">
+                  {{localize (concat "MY.system.skills." key "." skillKey)}}
+                </span>
+                <select name="system.skills.{{key}}.{{skillKey}}">
+                  {{#select skillValue}}
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                  {{/select}}
+                </select>
+              </div>
+            {{/each}}
+          </div>
+          <!-- Кнопка броска по характеристике (без умелости) -->
+          <button class="roll-characteristic" data-characteristic="{{key}}">Бросок</button>
+        </div>
+      {{/each}}
+    </div>
+
+    <!-- Вкладка предметов -->
+    <div class="tab" data-group="primary" data-tab="items">
+      <div class="items-header">
+        <h3>Предметы</h3>
+        <button class="item-create" data-type="common">+ Добавить</button>
+      </div>
+      <ul class="item-list">
+        {{#each actor.items as |item id|}}
+          <li class="item" data-item-id="{{item._id}}">
+            <img src="{{item.img}}" alt="{{item.name}}" width="32" height="32"/>
+            <span class="item-name">{{item.name}}</span>
+            <div class="item-controls">
+              <a class="item-edit" title="Редактировать"><i class="fas fa-edit"></i></a>
+              <a class="item-delete" title="Удалить"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </section>
+</form>

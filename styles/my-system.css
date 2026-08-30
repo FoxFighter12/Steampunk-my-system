@@ -1,0 +1,47 @@
+.my-system .characteristic-block {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+.my-system .char-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+.my-system .skills-list {
+  margin-left: 15px;
+}
+.my-system .skill-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 0;
+}
+.my-system .skill-name {
+  cursor: pointer;
+  color: #1e90ff;
+}
+.my-system .skill-name:hover {
+  text-decoration: underline;
+}
+.my-system .items-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.my-system .item-list {
+  list-style: none;
+  padding: 0;
+}
+.my-system .item-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+}
+.my-system .item-list .item-controls a {
+  margin-left: 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,28 @@
+{
+  "id": "my-system",
+  "title": "Моя система",
+  "description": "Система с характеристиками, умелостями и механикой броска двух костей",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "authors": [
+    {
+      "name": "Ваше имя"
+    }
+  ],
+  "esmodules": ["module/my-system.js"],
+  "styles": ["styles/my-system.css"],
+  "languages": [
+    {
+      "lang": "ru",
+      "name": "Русский",
+      "path": "lang/ru.json"
+    }
+  ],
+  "gridDistance": 1,
+  "gridUnits": "m",
+  "primaryTokenAttribute": "health",
+  "secondaryTokenAttribute": "power"
+}
